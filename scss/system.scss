@@ -632,13 +632,13 @@ hr{
         // Tape sur mobile
         .Button01.tape01 {
             box-shadow: shadow('button', Colors("Black","01"));
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
         // Désactive l'effet de survol si l'appareil est tactile
-        // .is-touch-device .Button01:hover {
-        //     transform: none;
-        // }
+        .is-touch-device .Button01:hover {
+            transform: none;
+        }
 
     // ---------------------------------------------
     
