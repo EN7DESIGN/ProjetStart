@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Body";
+  src: url("../font/Roboto-VariableFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,290 @@
+@use "sass:map";
+@use "sass:math";
+
+// Fonction pour calculer automatiquement la taille de police
+@function fluid-type($min-size, $max-size, $min-vw: 320, $max-vw: 1200) {
+    $slope: math.div($max-size - $min-size, $max-vw - $min-vw) * 100;
+    $intercept: $min-size - math.div($slope, 100) * $min-vw;
+    @return clamp(#{math.div($min-size, 16)}rem, calc(#{$slope}vw + #{math.div($intercept,16)}rem), #{math.div($max-size, 16)}rem);
+}
+
+//--- Variables Colors ---
+    $Colors: (
+        "Primary":("01": #0D3CF9,
+            "02": #072CC1,
+            "03": #D6DEFF,
+        ),
+        //Black
+        "Black": ("01": #000000,
+        ),
+
+        //LightGrey
+        "LightGrey":("01": #F4F4F4,
+        ),
+
+        //White
+        "White":("01": #FFFFFF,
+        )
+    );
+
+    //Fonction pour appler les couleurs
+    @function Colors($name, $shade: null) {
+        @if $shade {
+            @return map.get(map.get($Colors, $name), $shade);
+        }
+        @return map.get($Colors, $name);
+    }
+
+//------------------------
+
+// --- Tailles de Police (Font Sizes) ---
+    //Heading ---
+        //--- Responsive ---
+            $Heading: (
+                "H1": ("font-size": fluid-type(40, 56), // 40px pour mobile, 56px pour desktop
+                    "line-height": 120%,
+                    "font-weight": 700,
+                ),
+                "H2": ("font-size": fluid-type(36, 48),
+                    "line-height": 120%,
+                    "font-weight": 700,
+                ),
+                "H3": ("font-size": fluid-type(32, 40),
+                    "line-height": 120%,
+                    "font-weight": 700,
+                ),
+                "H4": ("font-size": fluid-type(24, 32),
+                    "line-height": 130%,
+                    "font-weight": 700,
+                ),
+                "H5": ("font-size": fluid-type(20, 24),
+                    "line-height": 140%,
+                    "font-weight": 700,
+                ),
+                "H6": ("font-size": fluid-type(18, 20),
+                    "line-height": 140%,
+                    "font-weight": 700,
+                ),
+            );
+        //..................
+    //-----------
+
+    //Paragraph ---------
+        //Large -------
+            $P-L: (
+                "EB": (
+                    "font-size": 1.25rem,
+                    "line-height": 150%,
+                    "font-weight": 800,
+                ),
+                "B": (
+                    "font-size": 1.25rem,
+                    "line-height": 150%,
+                    "font-weight": 700,
+                ),
+                "SB": (
+                    "font-size": 1.25rem,
+                    "line-height": 150%,
+                    "font-weight": 600,
+                ),
+                "M": (
+                    "font-size": 1.25rem,
+                    "line-height": 150%,
+                    "font-weight": 500,
+                ),
+                "N": (
+                    "font-size": 1.25rem,
+                    "line-height": 150%,
+                    "font-weight": 400,
+                ),
+                "L": (
+                    "font-size": 1.25rem,
+                    "line-height": 150%,
+                    "font-weight": 300,
+                ),
+            );
+        //-------------
+
+        //Medium ------
+            $P-M: (
+                "EB": (
+                    "font-size": 1.25rem,
+                    "line-height": 150%,
+                    "font-weight": 800,
+                ),
+                "B": (
+                    "font-size": 1.125rem,
+                    "line-height": 150%,
+                    "font-weight": 700,
+                ),
+                "SB": (
+                    "font-size": 1.125rem,
+                    "line-height": 150%,
+                    "font-weight": 600,
+                ),
+                "M": (
+                    "font-size": 1.125rem,
+                    "line-height": 150%,
+                    "font-weight": 500,
+                ),
+                "N": (
+                    "font-size": 1.125rem,
+                    "line-height": 150%,
+                    "font-weight": 400,
+                ),
+                "L": (
+                    "font-size": 1.125rem,
+                    "line-height": 150%,
+                    "font-weight": 300,
+                ),
+            );
+        //-------------
+
+        //Regular -----
+            $P-R: (
+                "EB": (
+                    "font-size": 1rem,
+                    "line-height": 150%,
+                    "font-weight": 800,
+                ),
+                "B": (
+                    "font-size": 1rem,
+                    "line-height": 150%,
+                    "font-weight": 700,
+                ),
+                "SB": (
+                    "font-size": 1rem,
+                    "line-height": 150%,
+                    "font-weight": 600,
+                ),
+                "M": (
+                    "font-size": 1rem,
+                    "line-height": 150%,
+                    "font-weight": 500,
+                ),
+                "N": (
+                    "font-size": 1rem,
+                    "line-height": 150%,
+                    "font-weight": 400,
+                ),
+                "L": (
+                    "font-size": 1rem,
+                    "line-height": 150%,
+                    "font-weight": 300,
+                ),
+            );
+        //-------------
+
+        //Small -----
+            $P-S: (
+                "EB": (
+                    "font-size": 0.875rem,
+                    "line-height": 150%,
+                    "font-weight": 800,
+                ),
+                "B": (
+                    "font-size": 0.875rem,
+                    "line-height": 150%,
+                    "font-weight": 700,
+                ),
+                "SB": (
+                    "font-size": 0.875rem,
+                    "line-height": 150%,
+                    "font-weight": 600,
+                ),
+                "M": (
+                    "font-size": 0.875rem,
+                    "line-height": 150%,
+                    "font-weight": 500,
+                ),
+                "N": (
+                    "font-size": 0.875rem,
+                    "line-height": 150%,
+                    "font-weight": 400,
+                ),
+                "L": (
+                    "font-size": 0.875rem,
+                    "line-height": 150%,
+                    "font-weight": 300,
+                ),
+            );
+        //-----------
+
+        //Tiny -----
+            $P-T: (
+                "EB": (
+                    "font-size": 0.75rem,
+                    "line-height": 150%,
+                    "font-weight": 800,
+                ),
+                "B": (
+                    "font-size": 0.75rem,
+                    "line-height": 150%,
+                    "font-weight": 700,
+                ),
+                "SB": (
+                    "font-size": 0.75rem,
+                    "line-height": 150%,
+                    "font-weight": 600,
+                ),
+                "M": (
+                    "font-size": 0.75rem,
+                    "line-height": 150%,
+                    "font-weight": 500,
+                ),
+                "N": (
+                    "font-size": 0.75rem,
+                    "line-height": 150%,
+                    "font-weight": 400,
+                ),
+                "L": (
+                    "font-size": 0.75rem,
+                    "line-height": 150%,
+                    "font-weight": 300,
+                ),
+            );
+        //----------
+    //-------------------
+//---------------------------------------
+
+// --- Variable Shadows ---------------------------------
+    $shadows: (
+    xxsmall: 0 1px 2px 0,
+    xsmall: 0 1px 3px 0,
+    small: 0 2px 4px 0,
+    medium: 0 4px 8px 0,
+    large: 0 8px 16px 0,
+    xlarge: 0 16px 32px 0,
+    xxlarge: 0 32px 64px 0,
+    button: 0 8px 15px,
+    );
+
+    // Nouvelle map pour les opacités correspondantes
+    $shadow-opacities: (
+    xxsmall: 0.05,
+    xsmall: 0.1,
+    small: 0.1,
+    medium: 0.15,
+    large: 0.2,
+    xlarge: 0.25,
+    xxlarge: 0.3,
+    button: 0.40,
+    );
+
+    // Fonction mise à jour pour générer l'ombre avec la couleur ET l'opacité
+    @function shadow($level, $color, $opacity: null) {
+    // On récupère l'opacité par défaut
+    $default-opacity: map-get($shadow-opacities, $level);
+    
+    // On gère la couleur. Si c'est une fonction de ton design system, on la résout
+    $resolved-color: if(type-of($color) == function, call($color), $color);
+    
+    // Si l'opacité n'est pas spécifiée, on utilise l'opacité par défaut
+    @if $opacity == null {
+        $opacity: $default-opacity;
+    }
+    
+    // On utilise la fonction SASS rgba() pour combiner la couleur et l'opacité
+    @return #{map-get($shadows, $level)} rgba($resolved-color, $opacity);
+    }
+//--------------------------------------------------------
