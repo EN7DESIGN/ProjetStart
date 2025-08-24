@@ -861,9 +861,4 @@ a:focus {
           box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-}
-
-.is-touch-device .Button01:hover {
-  -webkit-transform: none;
-          transform: none;
 }/*# sourceMappingURL=system.css.map */
