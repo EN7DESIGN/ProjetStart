@@ -635,6 +635,7 @@ hr{
             transform: translateY(-2px);
         }
 
+        /* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
         // Désactive l'effet de survol si l'appareil est tactile
         // .is-touch-device .Button01:hover {
         //     transform: none;
