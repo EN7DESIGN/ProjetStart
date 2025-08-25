@@ -605,15 +605,15 @@ hr{
             text-align: center;
             color: Colors("White","01");
             
-            background-color: Colors("Black","01");
+            background-color: Colors("Primary","01");
             border: none;
-            border-radius: 15px;
+            border-radius: 6px;
             box-sizing: border-box;
             outline: none;
             cursor: pointer;
 
             max-width: fit-content;
-            padding: 16px 24px;
+            padding: 8px 16px;
             transition: all 300ms ease-in-out;
 
             user-select: none; /* empecher la copie du texte du bouton */
@@ -625,19 +625,24 @@ hr{
             }
 
             &:hover {
-                box-shadow: shadow('button', Colors("Black","01"));
+                background-color: Colors("Primary","02");
+                box-shadow: shadow('button', Colors("Primary","02"));
                 transform: translateY(-2px);
             }
         }
+        
         // Tape sur mobile
         .Button01.tape01 {
-            box-shadow: shadow('button', Colors("Black","01"));
+            background-color: Colors("Primary","02");
+            box-shadow: shadow('button', Colors("Primary","02"));
             transform: translateY(-2px);
         }
 
         /* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
         // Désactive l'effet de survol si l'appareil est tactile
         // .is-touch-device .Button01:hover {
+        //     background-color: Colors("Primary","01");
+        //     box-shadow: none;
         //     transform: none;
         // }
     // ---------------------------------------------

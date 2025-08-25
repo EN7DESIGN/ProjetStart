@@ -826,9 +826,9 @@ a:focus {
 .Button01 {
   text-align: center;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #0D3CF9;
   border: none;
-  border-radius: 15px;
+  border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
@@ -836,7 +836,7 @@ a:focus {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  padding: 16px 24px;
+  padding: 8px 16px;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   -moz-user-select: none;
@@ -850,15 +850,17 @@ a:focus {
   pointer-events: none;
 }
 .Button01:hover {
-  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  background-color: #072CC1;
+  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
 
 .Button01.tape01 {
-  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  background-color: #072CC1;
+  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
