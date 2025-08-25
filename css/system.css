@@ -856,6 +856,13 @@ a:focus {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
+.Button01:active {
+  background-color: #0D3CF9;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
 
 .Button01.tape01 {
   background-color: #072CC1;
@@ -865,4 +872,11 @@ a:focus {
           transform: translateY(-2px);
 }
 
-/* ⚠️ A utiliser que si le boutton à un changement de couleur au hover *//*# sourceMappingURL=system.css.map */
+/* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
+.is-touch-device .Button01:hover {
+  background-color: #0D3CF9;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: none;
+          transform: none;
+}/*# sourceMappingURL=system.css.map */

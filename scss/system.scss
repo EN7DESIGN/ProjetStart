@@ -629,8 +629,13 @@ hr{
                 box-shadow: shadow('button', Colors("Primary","02"));
                 transform: translateY(-2px);
             }
+            &:active {
+                background-color: Colors("Primary","01");
+                box-shadow: none;
+                transform: scale(0.8);
+            }
         }
-        
+
         // Tape sur mobile
         .Button01.tape01 {
             background-color: Colors("Primary","02");
@@ -640,11 +645,11 @@ hr{
 
         /* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
         // Désactive l'effet de survol si l'appareil est tactile
-        // .is-touch-device .Button01:hover {
-        //     background-color: Colors("Primary","01");
-        //     box-shadow: none;
-        //     transform: none;
-        // }
+        .is-touch-device .Button01:hover {
+            background-color: Colors("Primary","01");
+            box-shadow: none;
+            transform: none;
+        }
     // ---------------------------------------------
     
 // ------------------------------
