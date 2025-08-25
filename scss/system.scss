@@ -573,6 +573,13 @@ hr{
             background: Colors("White","01");
             box-shadow: shadow('small', Colors("Black","01"));
     }
+    .Sect-Buttons.content {
+            width: 100%;
+    }
+    button{
+        min-width: fit-content;
+    }
+    
     /* RESET */
     /* Supprimer l'highlight pour les clics seulement */
         button, a {
@@ -589,14 +596,11 @@ hr{
     
     // Button 01 ----------------------------------
         /* Container */
-        .Sect-Buttons.container {
-            width: 100%;
-        }
         .ButtonContainer{
             display: flex;
-            flex-direction: column;
-            gap: 60px;
-            width: fit-content;
+            flex-wrap: wrap;
+            gap: 30px;
+            width: 100% ;
         }
 
         /* Stylisation */

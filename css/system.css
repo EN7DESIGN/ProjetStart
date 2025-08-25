@@ -788,6 +788,16 @@ hr {
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
+.Sect-Buttons.content {
+  width: 100%;
+}
+
+button {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
 /* RESET */
 /* Supprimer l'highlight pour les clics seulement */
 button, a {
@@ -804,22 +814,14 @@ a:focus {
 
 /* ............................................. */
 /* Container */
-.Sect-Buttons.container {
-  width: 100%;
-}
-
 .ButtonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 60px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
 }
 
 /* Stylisation */
