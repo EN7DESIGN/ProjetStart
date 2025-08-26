@@ -661,8 +661,16 @@ hr{
         /* Sizing */
 
         // Small
-        .Small{
-            padding: 6px 12x;
+        .Button01.Small{
+            padding: 6px 12px;
+        }
+        // Medium
+        .Button01:hover.Medium{
+            padding: 10px 22px;
+        }
+        // Large
+        .Button01.Large{
+            padding: 12px 28px;
         }
     // ---------------------------------------------
     

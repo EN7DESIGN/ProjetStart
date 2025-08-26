@@ -888,6 +888,14 @@ a:focus {
 
 /*------------ */
 /* Sizing */
-.Small {
-  padding: 6px 12x;
+.Button01.Small {
+  padding: 6px 12px;
+}
+
+.Button01:hover.Medium {
+  padding: 10px 22px;
+}
+
+.Button01.Large {
+  padding: 12px 28px;
 }/*# sourceMappingURL=system.css.map */
