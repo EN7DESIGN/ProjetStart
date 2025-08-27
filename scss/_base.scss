@@ -1,0 +1,5 @@
+// _base.scss import de tous les element necessaire
+@use 'sass:map';
+@use './variables' as *;
+@use './mixins' as *;
+@use './placehoders' as *;

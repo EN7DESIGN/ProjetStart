@@ -1,0 +1,208 @@
+@use "sass:map";
+@use './variables' as *;
+
+//Heading -------------
+    %H1 {
+        font-size: map.get(map.get($Heading, "H1"), "font-size");
+        line-height: map.get(map.get($Heading, "H1"), "line-height");
+        font-weight: map.get(map.get($Heading, "H1"), "font-weight");
+    }
+
+    %H2 {
+        font-size: map.get(map.get($Heading, "H2"), "font-size");
+        line-height: map.get(map.get($Heading, "H2"), "line-height");
+        font-weight: map.get(map.get($Heading, "H2"), "font-weight");
+    }
+
+    %H3 {
+        font-size: map.get(map.get($Heading, "H3"), "font-size");
+        line-height: map.get(map.get($Heading, "H3"), "line-height");
+        font-weight: map.get(map.get($Heading, "H3"), "font-weight");
+    }
+
+    %H4 {
+        font-size: map.get(map.get($Heading, "H4"), "font-size");
+        line-height: map.get(map.get($Heading, "H4"), "line-height");
+        font-weight: map.get(map.get($Heading, "H4"), "font-weight");
+    }
+
+    %H5 {
+        font-size: map.get(map.get($Heading, "H5"), "font-size");
+        line-height: map.get(map.get($Heading, "H5"), "line-height");
+        font-weight: map.get(map.get($Heading, "H5"), "font-weight");
+    }
+
+    %H6 {
+        font-size: map.get(map.get($Heading, "H6"), "font-size");
+        line-height: map.get(map.get($Heading, "H6"), "line-height");
+        font-weight: map.get(map.get($Heading, "H6"), "font-weight");
+    }
+
+//---------------------
+
+//Paragraphe -----------
+    //Large ------------
+        %P-L-eb {
+            font-size: map.get(map.get($P-L, "EB"), "font-size");
+            line-height: map.get(map.get($P-L, "EB"), "line-height");
+            font-weight: map.get(map.get($P-L, "EB"), "font-weight");
+        }
+        %P-L-b {
+            font-size: map.get(map.get($P-L, "B"), "font-size");
+            line-height: map.get(map.get($P-L, "B"), "line-height");
+            font-weight: map.get(map.get($P-L, "B"), "font-weight");
+        }
+        %P-L-sb {
+            font-size: map.get(map.get($P-L, "SB"), "font-size");
+            line-height: map.get(map.get($P-L, "SB"), "line-height");
+            font-weight: map.get(map.get($P-L, "SB"), "font-weight");
+        }
+        %P-L-m {
+            font-size: map.get(map.get($P-L, "M"), "font-size");
+            line-height: map.get(map.get($P-L, "M"), "line-height");
+            font-weight: map.get(map.get($P-L, "M"), "font-weight");
+        }
+        %P-L-n {
+            font-size: map.get(map.get($P-L, "N"), "font-size");
+            line-height: map.get(map.get($P-L, "N"), "line-height");
+            font-weight: map.get(map.get($P-L, "N"), "font-weight");
+        }
+        %P-L-l {
+            font-size: map.get(map.get($P-L, "L"), "font-size");
+            line-height: map.get(map.get($P-L, "L"), "line-height");
+            font-weight: map.get(map.get($P-L, "L"), "font-weight");
+        }
+    //------------------
+
+    //Medium -----------
+        %P-M-eb {
+            font-size: map.get(map.get($P-M, "EB"), "font-size");
+            line-height: map.get(map.get($P-M, "EB"), "line-height");
+            font-weight: map.get(map.get($P-M, "EB"), "font-weight");
+        }
+        %P-M-b {
+            font-size: map.get(map.get($P-M, "B"), "font-size");
+            line-height: map.get(map.get($P-M, "B"), "line-height");
+            font-weight: map.get(map.get($P-M, "B"), "font-weight");
+        }
+        %P-M-sb {
+            font-size: map.get(map.get($P-M, "SB"), "font-size");
+            line-height: map.get(map.get($P-M, "SB"), "line-height");
+            font-weight: map.get(map.get($P-M, "SB"), "font-weight");
+        }
+        %P-M-m {
+            font-size: map.get(map.get($P-M, "M"), "font-size");
+            line-height: map.get(map.get($P-M, "M"), "line-height");
+            font-weight: map.get(map.get($P-M, "M"), "font-weight");
+        }
+        %P-M-n {
+            font-size: map.get(map.get($P-M, "N"), "font-size");
+            line-height: map.get(map.get($P-M, "N"), "line-height");
+            font-weight: map.get(map.get($P-M, "N"), "font-weight");
+        }
+        %P-M-l {
+            font-size: map.get(map.get($P-M, "L"), "font-size");
+            line-height: map.get(map.get($P-M, "L"), "line-height");
+            font-weight: map.get(map.get($P-M, "L"), "font-weight");
+        }
+    //------------------
+
+    //Regular ----------
+        %P-R-eb {
+            font-size: map.get(map.get($P-R, "EB"), "font-size");
+            line-height: map.get(map.get($P-R, "EB"), "line-height");
+            font-weight: map.get(map.get($P-R, "EB"), "font-weight");
+        }
+        %P-R-b {
+            font-size: map.get(map.get($P-R, "B"), "font-size");
+            line-height: map.get(map.get($P-R, "B"), "line-height");
+            font-weight: map.get(map.get($P-R, "B"), "font-weight");
+        }
+        %P-R-sb {
+            font-size: map.get(map.get($P-R, "SB"), "font-size");
+            line-height: map.get(map.get($P-R, "SB"), "line-height");
+            font-weight: map.get(map.get($P-R, "SB"), "font-weight");
+        }
+        %P-R-m {
+            font-size: map.get(map.get($P-R, "M"), "font-size");
+            line-height: map.get(map.get($P-R, "M"), "line-height");
+            font-weight: map.get(map.get($P-R, "M"), "font-weight");
+        }
+        %P-R-n {
+            font-size: map.get(map.get($P-R, "N"), "font-size");
+            line-height: map.get(map.get($P-R, "N"), "line-height");
+            font-weight: map.get(map.get($P-R, "N"), "font-weight");
+        }
+        %P-R-l {
+            font-size: map.get(map.get($P-R, "L"), "font-size");
+            line-height: map.get(map.get($P-R, "L"), "line-height");
+            font-weight: map.get(map.get($P-R, "L"), "font-weight");
+        }
+    //------------------
+
+    //Small ----------
+        %P-S-eb {
+            font-size: map.get(map.get($P-S, "EB"), "font-size");
+            line-height: map.get(map.get($P-S, "EB"), "line-height");
+            font-weight: map.get(map.get($P-S, "EB"), "font-weight");
+        }
+        %P-S-b {
+            font-size: map.get(map.get($P-S, "B"), "font-size");
+            line-height: map.get(map.get($P-S, "B"), "line-height");
+            font-weight: map.get(map.get($P-S, "B"), "font-weight");
+        }
+        %P-S-sb {
+            font-size: map.get(map.get($P-S, "SB"), "font-size");
+            line-height: map.get(map.get($P-S, "SB"), "line-height");
+            font-weight: map.get(map.get($P-S, "SB"), "font-weight");
+        }
+        %P-S-m {
+            font-size: map.get(map.get($P-S, "M"), "font-size");
+            line-height: map.get(map.get($P-S, "M"), "line-height");
+            font-weight: map.get(map.get($P-S, "M"), "font-weight");
+        }
+        %P-S-n {
+            font-size: map.get(map.get($P-S, "N"), "font-size");
+            line-height: map.get(map.get($P-S, "N"), "line-height");
+            font-weight: map.get(map.get($P-S, "N"), "font-weight");
+        }
+        %P-S-l {
+            font-size: map.get(map.get($P-S, "L"), "font-size");
+            line-height: map.get(map.get($P-S, "L"), "line-height");
+            font-weight: map.get(map.get($P-S, "L"), "font-weight");
+        }
+    //----------------
+
+    //Tiny ----------
+        %P-T-eb {
+            font-size: map.get(map.get($P-T, "EB"), "font-size");
+            line-height: map.get(map.get($P-T, "EB"), "line-height");
+            font-weight: map.get(map.get($P-T, "EB"), "font-weight");
+        }
+        %P-T-b {
+            font-size: map.get(map.get($P-T, "B"), "font-size");
+            line-height: map.get(map.get($P-T, "B"), "line-height");
+            font-weight: map.get(map.get($P-T, "B"), "font-weight");
+        }
+        %P-T-sb {
+            font-size: map.get(map.get($P-T, "SB"), "font-size");
+            line-height: map.get(map.get($P-T, "SB"), "line-height");
+            font-weight: map.get(map.get($P-T, "SB"), "font-weight");
+        }
+        %P-T-m {
+            font-size: map.get(map.get($P-T, "M"), "font-size");
+            line-height: map.get(map.get($P-T, "M"), "line-height");
+            font-weight: map.get(map.get($P-T, "M"), "font-weight");
+        }
+        %P-T-n {
+            font-size: map.get(map.get($P-T, "N"), "font-size");
+            line-height: map.get(map.get($P-T, "N"), "line-height");
+            font-weight: map.get(map.get($P-T, "N"), "font-weight");
+        }
+        %P-T-l {
+            font-size: map.get(map.get($P-T, "L"), "font-size");
+            line-height: map.get(map.get($P-T, "L"), "line-height");
+            font-weight: map.get(map.get($P-T, "L"), "font-weight");
+        }
+    //----------------
+//----------------------

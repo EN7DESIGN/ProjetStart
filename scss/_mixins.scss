@@ -1,0 +1,34 @@
+@use "sass:map";
+@use './variables' as *;
+
+// --- Shadows -----------------------
+    @mixin shadows($size: medium) {
+        @if $size ==xxsmall {
+            box-shadow: $shadows-xxsmall;
+        }
+
+        @else if $size ==xsmall {
+            box-shadow: $shadows-xsmall;
+        }
+
+        @else if $size ==small {
+            box-shadow: $shadows-small;
+        }
+
+        @else if $size ==medium {
+            box-shadow: $shadows-medium;
+        }
+
+        @else if $size ==large {
+            box-shadow: $shadows-large;
+        }
+
+        @else if $size ==xlarge {
+            box-shadow: $shadows-xlarge;
+        }
+
+        @else if $size ==xxlarge {
+            box-shadow: $shadows-xxlarge;
+        }
+    }
+//------------------------------------

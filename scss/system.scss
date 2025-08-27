@@ -1,0 +1,844 @@
+@use './base' as *;
+@use './variables' as *;
+@use './mixins' as *;
+
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+// Font --------
+    //Roboto
+    @font-face {
+            font-family: 'Body';
+            src: url('../font/Roboto-VariableFont.ttf') format('truetype');
+            font-weight: 100 900; //Plage de poids pour le font variable
+            font-style: normal;
+        }
+//-----------------
+
+html{
+    font-family: 'Body';
+    font-size: 16px;
+    color: Colors("Black","01"); 
+}
+body{
+    background-color: Colors("LightGrey","01");
+}
+hr{
+    width: 100%;
+}
+.Title {
+    @extend %H1;
+}
+//Sect-Typography -----
+    .Sect-Typography{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        padding: 64px;
+
+        margin: auto;
+        max-width: 1034px;
+        border-radius: 30px;
+        background-color: Colors("White", "01");
+        box-shadow: shadow('small', Colors("Black","01"));
+    }
+
+    .Content{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 64px;
+    }
+    // FontName ---------------
+        .FontName{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .FontName .Grp1{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                @extend %P-R-n;
+                opacity: 50%;
+            }
+            h1 {
+                font-size: 6rem;
+            }
+        }
+        .FontName .Grp2 p{
+            @extend %P-R-n;
+        }
+    // -------------------------
+
+    // Heading -------
+        .Heading{
+            display: flex;
+            align-items: flex-start;
+            gap: 64px;
+        }
+        .Heading .Grp{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 28px;
+        }
+
+        .Heading .TypeStyle{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+
+            p:first-child{
+                @extend %P-R-l;
+                opacity: 60%;
+            }
+
+            .H1{
+                @extend %H1;
+            }
+            .H2{
+                @extend %H2;
+            }
+            .H3{
+                @extend %H3;
+            }
+            .H4{
+                @extend %H4;
+            }
+            .H5{
+                @extend %H5;
+            }
+            .H6{
+                @extend %H6;
+            }
+        }
+    // ---------------
+
+    // Paragraphe ------
+        .Paragraphe{
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 32px;
+            width: 100%;
+        }
+        .Paragraphe .TypeStyle{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            > p:first-of-type{            
+                @extend %P-R-l;
+                opacity: 60%;
+            }
+        }
+        .Paragraphe .Content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+        }
+
+        // P-Large -----------------
+            .Content .P-L-eb{
+                @extend %P-L-eb;
+            }
+            .Paragraphe .P-L-b{
+                @extend %P-L-b;
+            }
+            .Paragraphe .P-L-sb{
+                @extend %P-L-sb;
+            }
+            .Paragraphe .P-L-m{
+                @extend %P-L-m;
+            }
+            .Paragraphe .P-L-n{
+                @extend %P-L-n;
+            }
+            .Paragraphe .P-L-l{
+                @extend %P-L-l;
+            }
+        // -------------------------
+
+        // P-Medium ----------------
+            .Paragraphe .P-M-eb{
+                @extend %P-M-eb;
+            }
+            .Paragraphe .P-M-b{
+                @extend %P-M-b;
+            }
+            .Paragraphe .P-M-sb{
+                @extend %P-M-sb;
+            }
+            .Paragraphe .P-M-m{
+                @extend %P-M-m;
+            }
+            .Paragraphe .P-M-n{
+                @extend %P-M-n;
+            }
+            .Paragraphe .P-M-l{
+                @extend %P-M-l;
+            }
+        // -------------------------
+
+        // P-Regular ---------------
+            .Paragraphe .P-R-eb{
+                @extend %P-R-eb;
+            }
+            .Paragraphe .P-R-b{
+                @extend %P-R-b;
+            }
+            .Paragraphe .P-R-sb{
+                @extend %P-R-sb;
+            }
+            .Paragraphe .P-R-m{
+                @extend %P-R-m;
+            }
+            .Paragraphe .P-R-n{
+                @extend %P-R-n;
+            }
+            .Paragraphe .P-R-l{
+                @extend %P-R-l;
+            }
+        // -------------------------
+
+        // P-Small ---------------
+            .Paragraphe .P-S-eb{
+                @extend %P-S-eb;
+            }
+            .Paragraphe .P-S-b{
+                @extend %P-S-b;
+            }
+            .Paragraphe .P-S-sb{
+                @extend %P-S-sb;
+            }
+            .Paragraphe .P-S-m{
+                @extend %P-S-m;
+            }
+            .Paragraphe .P-S-n{
+                @extend %P-S-n;
+            }
+            .Paragraphe .P-S-l{
+                @extend %P-S-l;
+            }
+        // -----------------------
+
+        // P-Tiny ---------------
+            .Paragraphe .P-T-eb{
+                @extend %P-T-eb;
+            }
+            .Paragraphe .P-T-b{
+                @extend %P-T-b;
+            }
+            .Paragraphe .P-T-sb{
+                @extend %P-T-sb;
+            }
+            .Paragraphe .P-T-m{
+                @extend %P-T-m;
+            }
+            .Paragraphe .P-T-n{
+                @extend %P-T-n;
+            }
+            .Paragraphe .P-T-l{
+                @extend %P-T-l;
+            }
+        // -----------------------
+    // -----------------
+// --------------------
+
+// Sect-Colors -------------
+    .Sect-Colors{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        max-width: 1034px;
+        margin: auto;
+        padding: 64px;
+        border-radius: 30px;
+        background: Colors("White","01");
+        box-shadow: shadow('small', Colors("Black","01"));
+    }
+    .Sect-Colors .Content{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        width: 100%;
+    }
+    .ColorSwatch{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 8px;
+        background: Colors("White","01");
+        box-shadow: shadow('small', Colors("Black","01"));
+
+        width: 100%;
+        max-width: 146px;
+    }
+    .Color{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 136px;
+        border-radius: 8px;
+    }
+    .Label{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+
+        p{
+            @extend %P-R-sb;
+        }
+        .CodeC{
+            @extend %P-R-n;
+            opacity: 60%;
+        }
+    }
+
+    // Primary 01
+    .Primary{
+        background: Colors("Primary","01");
+        color: Colors("White","01");
+    }
+    // Primary 02
+    .Primary02{
+        background: Colors("Primary","02");
+        color: Colors("White","01");
+    }
+    // Primary 03
+    .Primary03{
+        background: Colors("Primary","03");
+        color: Colors("Black","01");
+    }
+    // Black 01
+    .Black01{
+        background: Colors("Black","01");
+        color: Colors("White","01");
+    }
+    // LightGrey 01
+    .LightGrey01{
+        background: Colors("LightGrey","01");
+        color: Colors("Black","01");
+    }
+    // White 01
+    .White01{
+        background: Colors("White","01");
+        color: Colors("Black","01");
+    }
+// -------------------------
+
+// Sect-Shadows ------------
+    .Sect-Shadows{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        max-width: 1034px;
+        margin: auto;
+        padding: 64px;
+        border-radius: 30px;
+        background: Colors("White","01");
+        box-shadow: shadow('small', Colors("Black","01"));
+    }
+    .Sect-Shadows .Content{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+    .Shadows{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 24px;
+
+        border-radius: 8px;
+        width: 80px;
+        height: 86px;
+        background: Colors("White","01");
+    }
+    // xxsmall ------
+        .xxsmall{
+            box-shadow: shadow('xxsmall', Colors("Black","01"));
+        }
+    // xsmall ------
+        .xsmall{
+            box-shadow: shadow('xsmall', Colors("Black","01"));
+        }
+    // small ------
+        .small{
+            box-shadow: shadow('small', Colors("Black","01"));
+        }
+    // medium ------
+        .medium{
+            box-shadow: shadow('medium', Colors("Black","01"));
+        }
+    // large ------
+        .large{
+            box-shadow: shadow('large', Colors("Black","01"));
+        }
+    // xlarge ------
+        .xlarge{
+            box-shadow: shadow('xlarge', Colors("Black","01"));
+        }
+    // xxlarge ------
+        .xxlarge{
+            box-shadow: shadow('xxlarge', Colors("Black","01"));
+        }
+// -------------------------
+
+// Sect-Utilitaire -----------------
+    .Sect-Util{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        max-width: 1034px;
+        margin: auto;
+        padding: 64px;
+        border-radius: 30px;
+        background: Colors("White","01");
+        box-shadow: shadow('small', Colors("Black","01"));
+    }
+    .Sect-Util .Content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 22px;
+
+        width: 300px;
+        padding: 20px;
+        border: 1px solid rgba(Colors("Black", "01"), 0.3);
+        border-radius: 8px;
+        background-color: Colors("White","01");
+        box-shadow: shadow('medium', Colors("Black","01"));
+
+        // le titre du formulaire
+        >p:first-of-type{
+            @extend %H6;
+        }
+    }
+
+    //Input ------------------------------------
+        /* Conteneur principal */
+        .Input {
+            width: 100%;
+
+            label{
+                @extend %P-S-sb;
+                margin-bottom: 6px;
+            }
+        
+            /* les champ de saisie text et email */
+            input[type="text"], [type="email"]{
+                @extend %P-T-n;
+                width: 100%;
+                padding: 12px;
+                border: 1px solid rgba(Colors("Black", "01"), 0.3);
+                border-radius: 4px;
+                box-sizing: border-box; /* S'assure que le padding n'augmente pas la largeur totale */
+                transition: all 0.3s ease;
+            }
+
+            /* le texte de substitution (placeholder) */
+            input[type="text"]::placeholder, [type="email"]::placeholder{
+                color: rgba(Colors("Black","01"), 0.6);
+            }
+
+            /* lorsqu'on clique ou qu'on est dans le champ de saisie */
+            input[type="text"]:focus, [type="email"]:focus {
+                border-color: Colors("Primary","01"); /* Change la couleur de la bordure */
+                outline: none; /* Supprime la bordure de focus par défaut du navigateur */
+                box-shadow: shadow('small', Colors("Primary","01"), 0.3); /* Ajoute un halo de couleur */
+            }
+        }
+    // -------------------------------------------
+
+    // InputSelect --------------------------------
+        /* Styles pour le conteneur principal */
+        .InputSelect{
+            width: 100%;
+
+            /* Styles pour le titre Select */
+            label {
+                @extend %P-S-sb;
+                margin-bottom: 6px;
+            }
+
+            /* Styles pour le champ de sélection */
+            select {
+                @extend %P-S-n;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid rgba(Colors("Black", "01"), 0.3);
+                border-radius: 4px;
+                box-sizing: border-box;
+
+                cursor: pointer;
+                appearance: none; /* Supprime l'apparence par défaut du navigateur */
+                -webkit-appearance: none; /* Pour les navigateurs WebKit (Chrome, Safari) */
+                background-image: url(/assets/Chevron\ Down.svg); /* l'icône arrow */
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 16px;
+                transition: all 0.3s ease;
+            }
+
+            /* Styles pour l'option de placeholder */
+            select option[disabled] {
+                color: Colors("LightGrey","01") ;
+            }
+
+            /* Styles de focus pour le select */
+            select:focus {
+                border-color: Colors("Primary","01");
+                outline: none;
+                box-shadow: shadow('small', Colors("Primary","01"), 0.3);
+            }
+        }
+    // --------------------------------------------
+
+    // Text Area ---------------------------------
+        /* Styles pour le conteneur principal */
+        .TextArea {
+            width: 100%;
+
+            /* Styles pour le titre "Text Area" */
+            label {
+                @extend %P-S-sb;
+                margin-bottom: 6px;
+            }
+
+            /* Styles pour le champ de saisie de texte (textarea) */
+            textarea {
+                font-family: 'Body';
+                @extend %P-T-n;
+                width: 100%;
+                height: 150px; /* Définit la hauteur initiale du textarea */
+                padding: 10px;
+                border: 1px solid rgba(Colors("Black", "01"), 0.3);
+                border-radius: 4px;
+                box-sizing: border-box;
+                resize: vertical; /* Permet uniquement le redimensionnement vertical */
+                transition: border-color 0.3s ease;
+            }
+            
+            /* Styles pour le texte de substitution (placeholder) */
+            textarea::placeholder {
+                color: rgba(Colors("Black","01"), 0.6);
+            }
+
+            /* Styles de focus pour le textarea */
+            textarea:focus {
+                border-color: Colors("Primary","01"); /* Change la couleur de la bordure */
+                outline: none; /* Supprime la bordure de focus par défaut du navigateur */
+                box-shadow: shadow('small', Colors("Black","01"), 0.3); /* Ajoute un halo de couleur */
+            }
+        }
+    // -------------------------------------------
+
+//----------------------------------
+
+// Sect-Buttons -----------------
+    .Sect-Buttons{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+
+            max-width: 1034px;
+            margin: auto;
+            padding: 64px;
+            border-radius: 30px;
+            background: Colors("White","01");
+            box-shadow: shadow('small', Colors("Black","01"));
+            
+            .Content {
+                width: 100%;
+                gap: 36px;
+            }
+    }
+    button{
+        min-width: fit-content;
+    }
+
+    /* Container */
+    .ButtonContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 32px;
+        width: 100% ;
+    }
+    
+    /* RESET */
+    /* Supprimer l'highlight pour les clics seulement */
+        button, a {
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-focus-ring-color: transparent;
+        }
+        button:focus,
+        a:focus {
+        outline: none;
+        -webkit-focus-ring-color: transparent;
+        }
+    /* ............................................. */
+
+    // Button 01 ----------------------------------
+
+        /* Stylisation */
+            .Button01 {
+                @extend %P-S-m;
+                text-align: center;
+                color: Colors("White","01");
+                background-color: Colors("Black","01");
+                border: none;
+                border-radius: 6px;
+                box-sizing: border-box;
+                outline: none;
+                cursor: pointer;
+
+                max-width: fit-content;
+                padding: 12px 28px;
+                transition: all 300ms ease-in-out;
+
+                user-select: none; /* empecher la copie du texte du bouton */
+                -webkit-user-select: none;
+                touch-action: manipulation;/* bloquer les manipulation pas importante tels que le double-tap pour zoom*/
+
+                &:disabled { /* désactive les interactions de la souris sur les éléments lorsqu'il est dans l'état :disabled */
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    background-color: Colors("Primary","02");
+                    box-shadow: shadow('button', Colors("Black","01"));
+                    transform: translateY(-2px);
+                }
+                &:active {
+                    background-color: Colors("Primary","02");
+                    box-shadow: none;
+                    transform: scale(0.8);
+                }
+            }
+            
+            // Tape sur mobile
+            .Button01.tape01 {
+                background-color: Colors("Black","01");
+                box-shadow: shadow('button', Colors("Black","01"));
+                transform: translateY(-2px);
+            }
+    
+            /* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
+            // Désactive l'effet de survol si l'appareil est tactile
+            .is-touch-device .Button01:hover {
+                background-color: Colors("Primary","01");
+                box-shadow: none;
+                transform: none;
+            }
+        /*------------ */
+        
+        /* Sizing ---------- */
+            // Small
+            .Button01.Small{
+                padding: 6px 12px;
+            }
+            // Medium
+            .Button01.Medium{
+                padding: 10px 22px;
+            }
+            // Large
+            .Button01.Large{
+                padding: 12px 28px;
+            }
+        /*---------------------*/
+
+        // Primary ----------------------------------------------------
+            .Button01.Primary{
+                background-color: Colors("Primary","01");
+                &:hover {
+                        background-color: Colors("Primary","02");
+                        box-shadow: shadow('button', Colors("Primary","02"));
+                        transform: translateY(-2px);
+                }
+                &:active {
+                    background-color: Colors("Primary","02");
+                    box-shadow: none;
+                    transform: scale(0.8);
+                }
+            }
+            // Tape sur mobile
+            .Button01.Primary.tape01 {
+                background-color: Colors("Primary","02");
+                box-shadow: shadow('button', Colors("Primary","02"));
+            }
+        // ------------------------------------------------------------
+
+        // Secondary ----------------------------------------------------
+            .Button01.Secondary{
+                background-color: Colors("White","01");
+                border: 1px solid rgba(Colors("Primary", "01"), 1);
+                color: Colors("Primary","01");
+                &:hover {
+                        background-color: rgba(Colors("Primary", "01"), 0.2);
+                        box-shadow: shadow('button', Colors("Primary","02"));
+                }
+            }
+            // Tape sur mobile
+            .Button01.Secondary.tape01 {
+                background-color: rgba(Colors("Primary", "01"), 0.2);
+                box-shadow: shadow('button', Colors("Primary","02"));
+            }
+        // ------------------------------------------------------------
+    // ---------------------------------------------
+
+    // Button 02 -----------------------------------
+        /* Stylisation */
+            .Button02 {
+                @extend %P-S-n;
+                color: Colors("Black", "01");
+
+                background: Colors("White", "01");
+                border: 1px solid Colors("Black", "01");
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                padding: 14px 28px;
+                max-width: fit-content;
+                
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            // les span -------------------
+                .Button02 span {
+                    width: max-content;
+                }
+
+                .Button02 span:first-child {
+                    position: relative;
+                    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+                    z-index: 10;
+                }
+
+                .Button02 span:last-child {
+                    color: Colors("White", "01");
+                    position: absolute;
+                    bottom: 0;
+                    top: 50%;
+                    left: 50%;
+                    opacity: 0;
+                    height: 14px;
+
+                    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+                    transform: translateY(225%) translateX(-50%);
+                    z-index: 100;
+                }
+            // ----------------------------
+
+            // element after
+            .Button02:after {
+                content: "";
+                position: absolute;
+                transform-origin: bottom center;
+                bottom: -50%;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+                background-color: Colors("Black", "01");
+                transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+                transform: skewY(9.3deg) scaleY(0);
+                z-index: 50;
+            }
+
+        /* ---------- */
+
+        // hover effect ---------------
+            .Button02:hover:after {
+                transform-origin: bottom center;
+                transform: skewY(9.3deg) scaleY(2);
+            }
+
+            .Button02:hover span:last-child {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-70%);
+                transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+            }
+
+            .Button02:active {
+                transform: translateY(4%);
+            }
+        //-----------------------------
+
+        // Tape effect ----------------
+            .Button02.tape02 {
+                transform: scale(0.9);
+            }
+            .Button02.tape02:after {
+                transform-origin: bottom center;
+                transform: skewY(9.3deg) scaleY(2);
+            }
+            .Button02.tape02 span:last-child {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-70%);
+                transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+            }
+        // ----------------------------
+
+        // sizing -----------------------
+            // Small
+            .Button02.Small{
+                padding: 8px 10px;
+            }
+            // Medium
+            .Button02.Medium{
+                padding: 10px 22px;
+            }
+            // Large
+            .Button02.Large{
+                padding: 14px 28px;
+            }
+        // ------------------------------
+
+        // Primary ----------------------------------------------------
+            .Button02.Primary{
+                color: Colors("Primary","01");
+                border: 1px solid Colors("Primary", "01");
+
+                &:after{
+                    background-color: Colors("Primary", "01");
+                }
+            }
+            //Hover
+            .Button02.Primary:hover:after {
+                background-color: Colors("Primary", "01");
+            }
+        // ------------------------------------------------------------
+    // ---------------------------------------------
+    
+// ------------------------------
