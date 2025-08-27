@@ -48,5 +48,5 @@ function setupButtonInteraction(buttonSelector, tapeClass, duration) {
 // Appels de la fonction pour chaque groupe de boutons
 // ----------------------------------------------------
 
-// Boutons .Button01
+// Boutons .Button01 ...
 setupButtonInteraction(".Button01", "tape01", 300);
