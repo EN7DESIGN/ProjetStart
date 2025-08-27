@@ -831,7 +831,7 @@ a:focus {
 .Button01 {
   text-align: center;
   color: #FFFFFF;
-  background-color: #0D3CF9;
+  background-color: #000000;
   border: none;
   border-radius: 6px;
   -webkit-box-sizing: border-box;
@@ -856,8 +856,8 @@ a:focus {
 }
 .Button01:hover {
   background-color: #072CC1;
-  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
-          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
@@ -892,10 +892,22 @@ a:focus {
   padding: 6px 12px;
 }
 
-.Button01:hover.Medium {
+.Button01.Medium {
   padding: 10px 22px;
 }
 
 .Button01.Large {
   padding: 12px 28px;
+}
+
+/*---------------------*/
+.Button01.Primary {
+  background-color: #0D3CF9;
+}
+.Button01.Primary:hover {
+  background-color: #072CC1;
+  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }/*# sourceMappingURL=system.css.map */
