@@ -610,8 +610,7 @@ hr{
                 @extend %P-S-m;
                 text-align: center;
                 color: Colors("White","01");
-                
-                background-color: Colors("Primary","01");
+                background-color: Colors("Black","01");
                 border: none;
                 border-radius: 6px;
                 box-sizing: border-box;
@@ -632,7 +631,7 @@ hr{
 
                 &:hover {
                     background-color: Colors("Primary","02");
-                    box-shadow: shadow('button', Colors("Primary","02"));
+                    box-shadow: shadow('button', Colors("Black","01"));
                     transform: translateY(-2px);
                 }
                 &:active {
@@ -665,12 +664,22 @@ hr{
             padding: 6px 12px;
         }
         // Medium
-        .Button01:hover.Medium{
+        .Button01.Medium{
             padding: 10px 22px;
         }
         // Large
         .Button01.Large{
             padding: 12px 28px;
+        }
+        /*---------------------*/
+        // Primary
+        .Button01.Primary{
+            background-color: Colors("Primary","01");
+            &:hover {
+                    background-color: Colors("Primary","02");
+                    box-shadow: shadow('button', Colors("Primary","02"));
+                    transform: translateY(-2px);
+                }
         }
     // ---------------------------------------------
     
