@@ -138,9 +138,9 @@
             line-height: map.get(map.get($P-R, "L"), "line-height");
             font-weight: map.get(map.get($P-R, "L"), "font-weight");
         }
-        //------------------
+    //------------------
 
-        //Small ----------
+    //Small ----------
         %P-S-eb {
             font-size: map.get(map.get($P-S, "EB"), "font-size");
             line-height: map.get(map.get($P-S, "EB"), "line-height");
@@ -171,9 +171,9 @@
             line-height: map.get(map.get($P-S, "L"), "line-height");
             font-weight: map.get(map.get($P-S, "L"), "font-weight");
         }
-        //----------------
+    //----------------
 
-        //Tiny ----------
+    //Tiny ----------
         %P-T-eb {
             font-size: map.get(map.get($P-T, "EB"), "font-size");
             line-height: map.get(map.get($P-T, "EB"), "line-height");

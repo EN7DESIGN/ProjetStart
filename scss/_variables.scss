@@ -39,34 +39,32 @@
 
 // --- Tailles de Police (Font Sizes) ---
     //Heading ---
-        //--- Responsive ---
-            $Heading: (
-                "H1": ("font-size": fluid-type(40, 56), // 40px pour mobile, 56px pour desktop
-                    "line-height": 120%,
-                    "font-weight": 700,
-                ),
-                "H2": ("font-size": fluid-type(36, 48),
-                    "line-height": 120%,
-                    "font-weight": 700,
-                ),
-                "H3": ("font-size": fluid-type(32, 40),
-                    "line-height": 120%,
-                    "font-weight": 700,
-                ),
-                "H4": ("font-size": fluid-type(24, 32),
-                    "line-height": 130%,
-                    "font-weight": 700,
-                ),
-                "H5": ("font-size": fluid-type(20, 24),
-                    "line-height": 140%,
-                    "font-weight": 700,
-                ),
-                "H6": ("font-size": fluid-type(18, 20),
-                    "line-height": 140%,
-                    "font-weight": 700,
-                ),
-            );
-        //..................
+        $Heading: (
+            "H1": ("font-size": fluid-type(40, 56), // 40px pour mobile, 56px pour desktop
+                "line-height": 120%,
+                "font-weight": 700,
+            ),
+            "H2": ("font-size": fluid-type(36, 48),
+                "line-height": 120%,
+                "font-weight": 700,
+            ),
+            "H3": ("font-size": fluid-type(32, 40),
+                "line-height": 120%,
+                "font-weight": 700,
+            ),
+            "H4": ("font-size": fluid-type(24, 32),
+                "line-height": 130%,
+                "font-weight": 700,
+            ),
+            "H5": ("font-size": fluid-type(20, 24),
+                "line-height": 140%,
+                "font-weight": 700,
+            ),
+            "H6": ("font-size": fluid-type(18, 20),
+                "line-height": 140%,
+                "font-weight": 700,
+            ),
+        );
     //-----------
 
     //Paragraph ---------
