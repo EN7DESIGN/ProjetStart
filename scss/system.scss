@@ -572,9 +572,11 @@ hr{
             border-radius: 30px;
             background: Colors("White","01");
             box-shadow: shadow('small', Colors("Black","01"));
-    }
-    .Sect-Buttons.content {
-            width: 100%;
+            
+            .Content {
+                width: 100%;
+                gap: 36px;
+            }
     }
     button{
         min-width: fit-content;
@@ -618,7 +620,7 @@ hr{
                 cursor: pointer;
 
                 max-width: fit-content;
-                padding: 12px 26px;
+                padding: 12px 28px;
                 transition: all 300ms ease-in-out;
 
                 user-select: none; /* empecher la copie du texte du bouton */
@@ -643,8 +645,8 @@ hr{
             
             // Tape sur mobile
             .Button01.tape01 {
-                background-color: Colors("Primary","02");
-                box-shadow: shadow('button', Colors("Primary","02"));
+                background-color: Colors("Black","01");
+                box-shadow: shadow('button', Colors("Black","01"));
                 transform: translateY(-2px);
             }
     
@@ -658,29 +660,185 @@ hr{
         /*------------ */
         
         /* Sizing ---------- */
-
-        // Small
-        .Button01.Small{
-            padding: 6px 12px;
-        }
-        // Medium
-        .Button01.Medium{
-            padding: 10px 22px;
-        }
-        // Large
-        .Button01.Large{
-            padding: 12px 28px;
-        }
+            // Small
+            .Button01.Small{
+                padding: 6px 12px;
+            }
+            // Medium
+            .Button01.Medium{
+                padding: 10px 22px;
+            }
+            // Large
+            .Button01.Large{
+                padding: 12px 28px;
+            }
         /*---------------------*/
-        // Primary
-        .Button01.Primary{
-            background-color: Colors("Primary","01");
-            &:hover {
-                    background-color: Colors("Primary","02");
-                    box-shadow: shadow('button', Colors("Primary","02"));
-                    transform: translateY(-2px);
+
+        // Primary ----------------------------------------------------
+            .Button01.Primary{
+                background-color: Colors("Primary","01");
+                &:hover {
+                        background-color: Colors("Primary","02");
+                        box-shadow: shadow('button', Colors("Primary","02"));
+                        transform: translateY(-2px);
                 }
-        }
+                &:active {
+                    background-color: Colors("Primary","02");
+                    box-shadow: none;
+                    transform: scale(0.8);
+                }
+            }
+            // Tape sur mobile
+            .Button01.Primary.tape01 {
+                background-color: Colors("Primary","02");
+                box-shadow: shadow('button', Colors("Primary","02"));
+            }
+        // ------------------------------------------------------------
+
+        // Secondary ----------------------------------------------------
+            .Button01.Secondary{
+                background-color: Colors("White","01");
+                border: 1px solid rgba(Colors("Primary", "01"), 1);
+                color: Colors("Primary","01");
+                &:hover {
+                        background-color: rgba(Colors("Primary", "01"), 0.2);
+                        box-shadow: shadow('button', Colors("Primary","02"));
+                }
+            }
+            // Tape sur mobile
+            .Button01.Secondary.tape01 {
+                background-color: rgba(Colors("Primary", "01"), 0.2);
+                box-shadow: shadow('button', Colors("Primary","02"));
+            }
+        // ------------------------------------------------------------
+    // ---------------------------------------------
+
+    // Button 02 -----------------------------------
+        /* Stylisation */
+            .Button02 {
+                @extend %P-S-n;
+                color: Colors("Black", "01");
+
+                background: Colors("White", "01");
+                border: 1px solid Colors("Black", "01");
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                padding: 14px 28px;
+                max-width: fit-content;
+                
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            // les span -------------------
+                .Button02 span {
+                    width: max-content;
+                }
+
+                .Button02 span:first-child {
+                    position: relative;
+                    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+                    z-index: 10;
+                }
+
+                .Button02 span:last-child {
+                    color: Colors("White", "01");
+                    position: absolute;
+                    bottom: 0;
+                    top: 50%;
+                    left: 50%;
+                    opacity: 0;
+                    height: 14px;
+
+                    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+                    transform: translateY(225%) translateX(-50%);
+                    z-index: 100;
+                }
+            // ----------------------------
+
+            // element after
+            .Button02:after {
+                content: "";
+                position: absolute;
+                transform-origin: bottom center;
+                bottom: -50%;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+                background-color: Colors("Black", "01");
+                transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+                transform: skewY(9.3deg) scaleY(0);
+                z-index: 50;
+            }
+
+        /* ---------- */
+
+        // hover effect ---------------
+            .Button02:hover:after {
+                transform-origin: bottom center;
+                transform: skewY(9.3deg) scaleY(2);
+            }
+
+            .Button02:hover span:last-child {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-70%);
+                transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+            }
+
+            .Button02:active {
+                transform: translateY(4%);
+            }
+        //-----------------------------
+
+        // Tape effect ----------------
+            .Button02.tape02 {
+                transform: scale(0.9);
+            }
+            .Button02.tape02:after {
+                transform-origin: bottom center;
+                transform: skewY(9.3deg) scaleY(2);
+            }
+            .Button02.tape02 span:last-child {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-70%);
+                transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+            }
+        // ----------------------------
+
+        // sizing -----------------------
+            // Small
+            .Button02.Small{
+                padding: 8px 10px;
+            }
+            // Medium
+            .Button02.Medium{
+                padding: 10px 22px;
+            }
+            // Large
+            .Button02.Large{
+                padding: 14px 28px;
+            }
+        // ------------------------------
+
+        // Primary ----------------------------------------------------
+            .Button02.Primary{
+                color: Colors("Primary","01");
+                border: 1px solid Colors("Primary", "01");
+
+                &:after{
+                    background-color: Colors("Primary", "01");
+                }
+            }
+            //Hover
+            .Button02.Primary:hover:after {
+                background-color: Colors("Primary", "01");
+            }
+        // ------------------------------------------------------------
     // ---------------------------------------------
     
 // ------------------------------

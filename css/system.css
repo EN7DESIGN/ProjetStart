@@ -167,7 +167,7 @@
   font-weight: 500;
 }
 
-.Paragraphe .P-S-n, .InputSelect select {
+.Paragraphe .P-S-n, .InputSelect select, .Button02 {
   font-size: 0.875rem;
   line-height: 150%;
   font-weight: 400;
@@ -787,9 +787,9 @@ hr {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
-
-.Sect-Buttons.content {
+.Sect-Buttons .Content {
   width: 100%;
+  gap: 36px;
 }
 
 button {
@@ -841,7 +841,7 @@ a:focus {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  padding: 12px 26px;
+  padding: 12px 28px;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   -moz-user-select: none;
@@ -870,9 +870,9 @@ a:focus {
 }
 
 .Button01.tape01 {
-  background-color: #072CC1;
-  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
-          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+  background-color: #000000;
+  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
@@ -910,4 +910,169 @@ a:focus {
           box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+.Button01.Primary:active {
+  background-color: #072CC1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.Button01.Primary.tape01 {
+  background-color: #072CC1;
+  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+}
+
+.Button01.Secondary {
+  background-color: #FFFFFF;
+  border: 1px solid #0d3cf9;
+  color: #0D3CF9;
+}
+.Button01.Secondary:hover {
+  background-color: rgba(13, 60, 249, 0.2);
+  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+}
+
+.Button01.Secondary.tape01 {
+  background-color: rgba(13, 60, 249, 0.2);
+  -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+          box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+}
+
+/* Stylisation */
+.Button02 {
+  color: #000000;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 14px 28px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.Button02 span {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.Button02 span:first-child {
+  position: relative;
+  -webkit-transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.Button02 span:last-child {
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  height: 14px;
+  -webkit-transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  -webkit-transform: translateY(225%) translateX(-50%);
+          transform: translateY(225%) translateX(-50%);
+  z-index: 100;
+}
+
+.Button02:after {
+  content: "";
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transition: -webkit-transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1), -webkit-transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  -webkit-transform: skewY(9.3deg) scaleY(0);
+          transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+/* ---------- */
+.Button02:hover:after {
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: skewY(9.3deg) scaleY(2);
+          transform: skewY(9.3deg) scaleY(2);
+}
+
+.Button02:hover span:last-child {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-70%);
+          transform: translateX(-50%) translateY(-70%);
+  -webkit-transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.Button02:active {
+  -webkit-transform: translateY(4%);
+          transform: translateY(4%);
+}
+
+.Button02.tape02 {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.Button02.tape02:after {
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: skewY(9.3deg) scaleY(2);
+          transform: skewY(9.3deg) scaleY(2);
+}
+
+.Button02.tape02 span:last-child {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-70%);
+          transform: translateX(-50%) translateY(-70%);
+  -webkit-transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.Button02.Small {
+  padding: 8px 10px;
+}
+
+.Button02.Medium {
+  padding: 10px 22px;
+}
+
+.Button02.Large {
+  padding: 14px 28px;
+}
+
+.Button02.Primary {
+  color: #0D3CF9;
+  border: 1px solid #0D3CF9;
+}
+.Button02.Primary:after {
+  background-color: #0D3CF9;
+}
+
+.Button02.Primary:hover:after {
+  background-color: #0D3CF9;
 }/*# sourceMappingURL=system.css.map */
