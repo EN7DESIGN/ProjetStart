@@ -791,7 +791,7 @@ hr{
             }
 
             .Button02:active {
-                transform: translateY(4%);
+                transform: translateY(8%);
             }
         //-----------------------------
 
@@ -821,12 +821,28 @@ hr{
             }
             // Large
             .Button02.Large{
-                padding: 14px 28px;
+                padding: 12px 28px;
             }
         // ------------------------------
 
-        // Primary ----------------------------------------------------
+        // Primary -------------------------------------------------
             .Button02.Primary{
+                background: Colors("Primary", "01");
+                color: Colors("White","01");
+                border: 1px solid Colors("Primary", "01");
+
+                &:after{
+                    background-color: Colors("Primary", "04");
+                }
+            }
+            //Hover
+            .Button02.Primary:hover:after {
+                background-color: Colors("Primary", "04");
+            }
+        // -----------------------------------------------------------
+
+        // Secondary -------------------------------------------------
+            .Button02.Secondary{
                 color: Colors("Primary","01");
                 border: 1px solid Colors("Primary", "01");
 
@@ -835,10 +851,10 @@ hr{
                 }
             }
             //Hover
-            .Button02.Primary:hover:after {
+            .Button02.Secondary:hover:after {
                 background-color: Colors("Primary", "01");
             }
-        // ------------------------------------------------------------
+        // -----------------------------------------------------------
     // ---------------------------------------------
     
 // ------------------------------

@@ -1029,8 +1029,8 @@ a:focus {
 }
 
 .Button02:active {
-  -webkit-transform: translateY(4%);
-          transform: translateY(4%);
+  -webkit-transform: translateY(8%);
+          transform: translateY(8%);
 }
 
 .Button02.tape02 {
@@ -1062,17 +1062,30 @@ a:focus {
 }
 
 .Button02.Large {
-  padding: 14px 28px;
+  padding: 12px 28px;
 }
 
 .Button02.Primary {
-  color: #0D3CF9;
+  background: #0D3CF9;
+  color: #FFFFFF;
   border: 1px solid #0D3CF9;
 }
 .Button02.Primary:after {
-  background-color: #0D3CF9;
+  background-color: #051f8a;
 }
 
 .Button02.Primary:hover:after {
+  background-color: #051f8a;
+}
+
+.Button02.Secondary {
+  color: #0D3CF9;
+  border: 1px solid #0D3CF9;
+}
+.Button02.Secondary:after {
+  background-color: #0D3CF9;
+}
+
+.Button02.Secondary:hover:after {
   background-color: #0D3CF9;
 }/*# sourceMappingURL=system.css.map */
